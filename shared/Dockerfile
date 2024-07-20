@@ -5,14 +5,14 @@ FROM apify/actor-node:20 AS builder
 
 # Copy just package.json and package-lock.json
 # to speed up the build using Docker layer cache.
-COPY package*.json ./
+COPY code/package*.json ./
 
 # Install all dependencies. Don't audit to speed up the installation.
 RUN npm install --include=dev --audit=false
 
 # Next, copy the source files using the user set
 # in the base image.
-COPY . ./
+COPY code ./
 
 # Install all dependencies and build the project.
 # Don't audit to speed up the installation.
@@ -23,7 +23,7 @@ FROM apify/actor-node:20
 
 # Copy just package.json and package-lock.json
 # to speed up the build using Docker layer cache.
-COPY package*.json ./
+COPY code/package*.json ./
 
 # Install NPM packages, skip optional and development dependencies to
 # keep the image small. Avoid logging too much and print the dependency
@@ -44,8 +44,13 @@ COPY --from=builder /usr/src/app/dist ./dist
 # Next, copy the remaining files and directories with the source code.
 # Since we do this after NPM install, quick build will be really fast
 # for most source file changes.
-COPY . ./
+COPY code ./
 
+# Environment variable to determine which Actor should start.
+ARG ACTOR_PATH_IN_DOCKER_CONTEXT
+ENV ACTOR_PATH_IN_DOCKER_CONTEXT="${ACTOR_PATH_IN_DOCKER_CONTEXT}"
+
+RUN echo "ACTOR_PATH_IN_DOCKER_CONTEXT=${ACTOR_PATH_IN_DOCKER_CONTEXT}"
 
 # Run the image.
 CMD npm run start:prod --silent

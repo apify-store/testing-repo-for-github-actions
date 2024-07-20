@@ -1,0 +1,30 @@
+# name: Apify Platform Tests
+
+# on:
+#     pull_request:
+#         branches: [ master, main ]
+
+# concurrency:
+#     group: ${{ github.workflow }}-${{ github.ref }}
+#     cancel-in-progress: true
+
+# jobs:
+#     buildAndTest:
+#         name: Apify Platform Tests
+#         if: |
+#           !contains(github.event.head_commit.message, '[skip ci]') &&
+#           !contains(github.event.head_commit.message, '[skip platform-test]')
+
+#         runs-on: self-hosted
+#         steps:
+#             # We need access to `actors` and `standalone-actors`
+#             -   uses: actions/checkout@v4
+#                 with:
+#                     sparse-checkout: |
+#                         actors
+#                         standalone-actors
+#             -   name: Build and Test actor build
+#                 env:
+#                     APIFY_TOKEN_APIFY: ${{ secrets.APIFY_TOKEN_APIFY }}
+#                     TESTER_APIFY_TOKEN: ${{ secrets.TESTER_APIFY_TOKEN }}
+#                 run: npm run gha:start:build

@@ -10,6 +10,6 @@
         "lib": ["DOM"]
     },
     "include": [
-        "./src/**/*"
+        "code/src/**/*"
     ]
 }
