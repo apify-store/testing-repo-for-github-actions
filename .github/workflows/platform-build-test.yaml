@@ -20,9 +20,7 @@ jobs:
             # We need access to `actors` and `standalone-actors`
             -   uses: actions/checkout@v4
                 with:
-                    sparse-checkout: |
-                        actors
-                        standalone-actors
+                    fetch-depth: 2
             -   name: Build and Test actor build
                 env:
                     APIFY_TOKEN_LUKASKRIVKA: ${{ secrets.APIFY_TOKEN_LUKASKRIVKA }}
