@@ -4,11 +4,10 @@ on:
     push:
         branches: [ master, main ]
 
-# concurrency:
-#    group: ${{ github.workflow }}-${{ github.ref }}
-#    cancel-in-progress: true
-
 jobs:
     buildLatest:
         uses: apify-projects/store-github-actions-source/.github/workflows/push-build-latest.yaml@master
+        # Remove the input for production runs (default is 'prod')
+        with: 
+            runnerLabel: 'beta'
         secrets: inherit
