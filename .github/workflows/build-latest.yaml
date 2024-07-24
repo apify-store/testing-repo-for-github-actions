@@ -10,19 +10,5 @@ concurrency:
 
 jobs:
     buildLatest:
-        name: Build latest - test repo
-        if: |
-          !contains(github.event.head_commit.message, '[skip ci]') &&
-          !contains(github.event.head_commit.message, '[skip platform-test]')
-
-        runs-on: 
-            labels: beta
-        steps:
-            -   uses: actions/checkout@v4
-                with:
-                    fetch-depth: 2
-            -   name: Build latest and report to slack
-                env:
-                    APIFY_TOKEN_LUKASKRIVKA: ${{ secrets.APIFY_TOKEN_LUKASKRIVKA }}
-                    TESTER_APIFY_TOKEN: ${{ secrets.TESTER_APIFY_TOKEN }}
-                run: npm run gha:start:build
+        uses: apify-projects/store-github-actions-source/blob/master/.github/workflows/push-build-latest.yaml
+        secrets: inherit
