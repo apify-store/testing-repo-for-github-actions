@@ -15,7 +15,8 @@ jobs:
           !contains(github.event.head_commit.message, '[skip ci]') &&
           !contains(github.event.head_commit.message, '[skip platform-test]')
 
-        runs-on: self-hosted
+        runs-on: 
+            labels: beta
         steps:
             -   uses: actions/checkout@v4
                 with:
