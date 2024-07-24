@@ -10,5 +10,5 @@ concurrency:
 
 jobs:
     buildLatest:
-        uses: apify-projects/store-github-actions-source/blob/master/.github/workflows/push-build-latest.yaml
+        uses: apify-projects/store-github-actions-source/blob/master/.github/workflows/push-build-latest.yaml@master
         secrets: inherit
