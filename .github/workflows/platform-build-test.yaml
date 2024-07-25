@@ -6,7 +6,7 @@ on:
 
 jobs:
     buildDevelAndTest:
-        uses: apify-projects/store-github-actions-source/.github/workflows/pr-build-test.yaml.yaml@master
+        uses: apify-projects/store-github-actions-source/.github/workflows/pr-build-test.yaml@master
         # Remove the input for production runs (default is 'prod')
         with: 
             runnerLabel: 'beta'
