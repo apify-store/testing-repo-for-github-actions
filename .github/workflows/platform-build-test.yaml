@@ -1,28 +1,13 @@
-name: PR build and test - Test repo
+name: PR -> Build devel and test
 
 on:
     pull_request:
         branches: [ master, main ]
 
-concurrency:
-    group: ${{ github.workflow }}-${{ github.ref }}
-    cancel-in-progress: true
-
 jobs:
-    buildAndTest:
-        name: PR build and test - test repo
-        if: |
-          !contains(github.event.head_commit.message, '[skip ci]') &&
-          !contains(github.event.head_commit.message, '[skip platform-test]')
-
-        runs-on: self-hosted
-        steps:
-            # We need access to `actors` and `standalone-actors`
-            -   uses: actions/checkout@v4
-                with:
-                    fetch-depth: 2
-            -   name: Build and Test actor build
-                env:
-                    APIFY_TOKEN_LUKASKRIVKA: ${{ secrets.APIFY_TOKEN_LUKASKRIVKA }}
-                    TESTER_APIFY_TOKEN: ${{ secrets.TESTER_APIFY_TOKEN }}
-                run: npm run gha:start:build
+    buildDevelAndTest:
+        uses: apify-projects/store-github-actions-source/.github/workflows/pr-build-test.yaml.yaml@master
+        # Remove the input for production runs (default is 'prod')
+        with: 
+            runnerLabel: 'beta'
+        secrets: inherit
