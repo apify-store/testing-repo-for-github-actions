@@ -3,9 +3,11 @@
 # You can also use any other image from Docker Hub.
 FROM apify/actor-node:20 AS builder
 
+# test tet
 # Copy just package.json and package-lock.json
 # to speed up the build using Docker layer cache.
 COPY code/package*.json ./
+
 #testtest
 # Install all dependencies. Don't audit to speed up the installation.
 RUN npm install --include=dev --audit=false
