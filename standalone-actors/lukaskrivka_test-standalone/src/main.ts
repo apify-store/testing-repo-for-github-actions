@@ -14,7 +14,7 @@ import { Actor } from 'apify';
 await Actor.init();
 
 
-// blablablabla
+// blablablablabla
 
 interface Input {
     url: string;
