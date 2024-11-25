@@ -7,8 +7,8 @@
 	"meta": {
 		"templateId": "ts-crawlee-cheerio"
 	},
-    "dockerfile": "../../../shared/Dockerfile",
+    "dockerfile": "../../../Dockerfile",
     "dockerContextDir": "../../..",
-    "changelog": "../../../shared/CHANGELOG.md", 
+    "changelog": "../../../CHANGELOG.md", 
 	"input": "./input_schema.json"
 }
