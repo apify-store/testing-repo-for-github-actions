@@ -9,7 +9,7 @@ import { Actor } from 'apify';
 // read more about this here: https://nodejs.org/docs/latest-v18.x/api/esm.html#mandatory-file-extensions
 // note that we need to use `.js` even when inside TS files
 // import { router } from './routes.js';
-
+// test
 // The init() call configures the Actor for its environment. It's recommended to start every Actor with an init().
 await Actor.init();
 
