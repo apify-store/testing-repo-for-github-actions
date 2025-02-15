@@ -3,6 +3,30 @@
     "type": "object",
     "schemaVersion": 1,
     "properties": {
-        
+        "hashtags": {
+            "title": "Instagram hashtags",
+            "type": "array",
+            "description": "Type in the hashtag with or without <code>#</code> symbol - the scraper will get the data either way. Use the <strong>&#43; Add</strong> button to add more hashtags.",
+            "editor": "stringList",
+            "prefill": [
+                "webscraping"
+            ]
+        },
+        "resultsType": {
+            "title": "What do you want to scrape from each hashtag?",
+            "type": "string",
+            "description": "You can choose to get posts or videos.",
+            "editor": "select",
+            "enum": [
+                "posts",
+                "stories"
+            ],
+            "enumTitles": [
+                "Scrape posts",
+                "Scrape videos"
+            ],
+            "default": "posts",
+            "prefill": "posts"
+        },
     }
 }
