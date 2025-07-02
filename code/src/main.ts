@@ -33,9 +33,8 @@ const proxyConfiguration = await Actor.createProxyConfiguration();
 const crawler = new CheerioCrawler({
     proxyConfiguration,
     maxRequestsPerCrawl,
-    requestHandler: async ({ enqueueLinks, request, $, log }) => {
+    requestHandler: async ({ request, $, log }) => {
         log.info('enqueueing new URLs');
-        await enqueueLinks();
 
         // Extract title from the page.
         const title = $('title').text();
