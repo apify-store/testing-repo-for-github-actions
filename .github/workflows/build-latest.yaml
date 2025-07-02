@@ -1,13 +1,27 @@
-name: Build latest - Test repo
+name: Build latest and report to slack
 
 on:
     push:
         branches: [ master, main ]
 
 jobs:
-    buildLatest:
-        uses: apify-store/github-actions-source/.github/workflows/push-build-latest.yaml@master
-        # Remove the input for production runs (default is 'prod')
-        with: 
-            runnerLabel: 'beta'
-        secrets: inherit
+    pushBuildLatest:
+        name: 'Build latest: ${{github.repository}} ${{github.event.head_commit.message}}'
+        if: |
+          !contains(github.event.head_commit.message, '[skip ci]') &&
+          !contains(github.event.head_commit.message, '[skip platform-test]')
+
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                fetch-depth: 0
+            # A simple node script that converts secrets to env vars
+            # Use specific commit SHA to prevent someone stealing that repo
+            - uses: oNaiPs/secrets-to-env-action@b64e0192bc4bd2ec0682dee8696470d4866577fa
+              with:
+                secrets: ${{ toJSON(secrets) }}
+            - name: Install dependencies
+              run: npm install
+            - name: Build and Test actor build
+              run: npx public-actors-tools release --push-event-path ${{ github.event_path }}
