@@ -1,0 +1,107 @@
+{
+    "numTotalTestSuites": 4,
+    "numPassedTestSuites": 0,
+    "numFailedTestSuites": 4,
+    "numPendingTestSuites": 0,
+    "numTotalTests": 4,
+    "numPassedTests": 2,
+    "numFailedTests": 2,
+    "numPendingTests": 0,
+    "numTodoTests": 0,
+    "snapshot": {
+        "added": 0,
+        "failure": false,
+        "filesAdded": 0,
+        "filesRemoved": 0,
+        "filesRemovedList": [],
+        "filesUnmatched": 0,
+        "filesUpdated": 0,
+        "matched": 0,
+        "total": 0,
+        "unchecked": 0,
+        "uncheckedKeysByFile": [],
+        "unmatched": 0,
+        "updated": 0,
+        "didUpdate": false
+    },
+    "startTime": 1752170593173,
+    "success": false,
+    "testResults": [
+        {
+            "assertionResults": [
+                {
+                    "ancestorTitles": [
+                        "testing-github-integration tests"
+                    ],
+                    "fullName": "testing-github-integration tests lukaskrivka/testing-github-integration-2: basic test",
+                    "status": "failed",
+                    "title": "lukaskrivka/testing-github-integration-2: basic test",
+                    "duration": 99922.949145,
+                    "failureMessages": [
+                        "AssertionError: Dataset cleanItemCount: expected 95 to be greater than 150\n    at /home/oklinov/docs/apify/repos/testing-repo-for-github-actions/test/platform/testing-github-integration-2.test.ts:16:60\n    at RunTestResult.withDataset (/home/oklinov/docs/apify/repos/store-utils-actors/github-actions-runner/lib/lib.ts:224:9)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at /home/oklinov/docs/apify/repos/testing-repo-for-github-actions/test/platform/testing-github-integration-2.test.ts:15:9\n    at /home/oklinov/docs/apify/repos/store-utils-actors/github-actions-runner/lib/lib.ts:69:9\n    at file:///home/oklinov/docs/apify/repos/testing-repo-for-github-actions/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20",
+                        "AssertionError: First dataset item' title: expected 'Crawlee · Build reliable crawlers. Fa…' to deeply equal 'Examples | Crawlee for JavaScript · B…'\n    at /home/oklinov/docs/apify/repos/testing-repo-for-github-actions/test/platform/testing-github-integration-2.test.ts:19:66\n    at RunTestResult.withDataset (/home/oklinov/docs/apify/repos/store-utils-actors/github-actions-runner/lib/lib.ts:224:9)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at /home/oklinov/docs/apify/repos/testing-repo-for-github-actions/test/platform/testing-github-integration-2.test.ts:15:9\n    at /home/oklinov/docs/apify/repos/store-utils-actors/github-actions-runner/lib/lib.ts:69:9\n    at file:///home/oklinov/docs/apify/repos/testing-repo-for-github-actions/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20",
+                        "AssertionError: Second dataset item' title: expected 'Crawlee for JavaScript · Build reliab…' to deeply equal 'Crawlee · Build reliable crawlers. Fa…'\n    at /home/oklinov/docs/apify/repos/testing-repo-for-github-actions/test/platform/testing-github-integration-2.test.ts:20:67\n    at RunTestResult.withDataset (/home/oklinov/docs/apify/repos/store-utils-actors/github-actions-runner/lib/lib.ts:224:9)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at /home/oklinov/docs/apify/repos/testing-repo-for-github-actions/test/platform/testing-github-integration-2.test.ts:15:9\n    at /home/oklinov/docs/apify/repos/store-utils-actors/github-actions-runner/lib/lib.ts:69:9\n    at file:///home/oklinov/docs/apify/repos/testing-repo-for-github-actions/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20"
+                    ],
+                    "meta": {
+                        "runId": "egELRMPcdgiWB2XMz"
+                    }
+                },
+                {
+                    "ancestorTitles": [
+                        "testing-github-integration tests"
+                    ],
+                    "fullName": "testing-github-integration tests lukaskrivka/testing-github-integration-2: another basic test",
+                    "status": "passed",
+                    "title": "lukaskrivka/testing-github-integration-2: another basic test",
+                    "duration": 92114.846632,
+                    "failureMessages": [],
+                    "meta": {
+                        "runId": "yEiTUpOLvZb3DjWpu"
+                    }
+                }
+            ],
+            "startTime": 1752170593857,
+            "endTime": 1752170693779.9492,
+            "status": "failed",
+            "message": "",
+            "name": "/home/oklinov/docs/apify/repos/testing-repo-for-github-actions/test/platform/testing-github-integration-2.test.ts"
+        },
+        {
+            "assertionResults": [
+                {
+                    "ancestorTitles": [
+                        "testing-github-integration tests"
+                    ],
+                    "fullName": "testing-github-integration tests lukaskrivka/testing-github-integration: basic test",
+                    "status": "passed",
+                    "title": "lukaskrivka/testing-github-integration: basic test",
+                    "duration": 210268.964041,
+                    "failureMessages": [],
+                    "meta": {
+                        "runId": "IFbWb74Ia02WbxSEy"
+                    }
+                },
+                {
+                    "ancestorTitles": [
+                        "testing-github-integration tests"
+                    ],
+                    "fullName": "testing-github-integration tests lukaskrivka/testing-github-integration: another basic test",
+                    "status": "failed",
+                    "title": "lukaskrivka/testing-github-integration: another basic test",
+                    "duration": 155095.762197,
+                    "failureMessages": [
+                        "AssertionError: Dataset cleanItemCount: expected 96 to be greater than 100\n    at /home/oklinov/docs/apify/repos/testing-repo-for-github-actions/test/platform/testing-github-integration.test.ts:28:60\n    at RunTestResult.withDataset (/home/oklinov/docs/apify/repos/store-utils-actors/github-actions-runner/lib/lib.ts:224:9)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at /home/oklinov/docs/apify/repos/testing-repo-for-github-actions/test/platform/testing-github-integration.test.ts:27:9\n    at /home/oklinov/docs/apify/repos/store-utils-actors/github-actions-runner/lib/lib.ts:69:9\n    at file:///home/oklinov/docs/apify/repos/testing-repo-for-github-actions/node_modules/@vitest/runner/dist/chunk-hooks.js:752:20"
+                    ],
+                    "meta": {
+                        "runId": "vjTdZuOTedQAe3apG"
+                    }
+                }
+            ],
+            "startTime": 1752170593857,
+            "endTime": 1752170804125.964,
+            "status": "failed",
+            "message": "",
+            "name": "/home/oklinov/docs/apify/repos/testing-repo-for-github-actions/test/platform/testing-github-integration.test.ts"
+        }
+    ]
+}
