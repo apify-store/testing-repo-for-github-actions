@@ -7,7 +7,7 @@ on:
     workflow_dispatch:
 
 jobs:
-    platformTestsCore:
+    platformTestsDaily:
         name: Platform tests - Daily
         if: github.ref == 'refs/heads/master'
         runs-on: ubuntu-latest
@@ -25,6 +25,8 @@ jobs:
               run: npm install
 
             - name: Test
+              env:
+                JOB_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
               run: |
                   set +e
                   export RUN_ALL_PLATFORM_TESTS=1

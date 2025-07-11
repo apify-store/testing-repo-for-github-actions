@@ -30,5 +30,9 @@ jobs:
                   export RUN_ALL_PLATFORM_TESTS=1
                   npx vitest ./test/platform/core --run --reporter=default --reporter=json --outputFile=./test-output.json
                   return_code=$?
-                  npx public-actors-tools report-tests --report-file ./test-output.json
+                  npx public-actors-tools report-tests \
+                    --report-file ./test-output.json \
+                    --workflow-nmae ${{ github.workflow }} \
+                    --job-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+                    --repository ${{ github.repository }}
                   exit $return_code
