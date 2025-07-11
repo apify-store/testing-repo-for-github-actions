@@ -25,8 +25,8 @@ jobs:
               run: npm install
 
             - name: Test
-              continue-on-error: true
               run: |
+                  set +e
                   export RUN_ALL_PLATFORM_TESTS=1
                   npx vitest ./test/platform/core --run --reporter=default --reporter=json --outputFile=./test-output.json
                   return_code=$?
