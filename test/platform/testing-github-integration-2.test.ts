@@ -1,7 +1,7 @@
 import { describe, testActor } from '@oklinov/public-actors-tools/lib/lib'
 
-describe('testing-github-integration tests', () => {
-    testActor('lukaskrivka/testing-github-integration-2', 'basic test', async ({ expect: Expect, run }) => {
+describe('testing-github-integration Tests', () => {
+    testActor('lukaskrivka/testing-github-integration-2', 'Basic test', async ({ expect: Expect, run }) => {
         const expect = Expect.soft
         const runResult = await run({ input: {} })
         Expect(runResult).toHaveStatus('SUCCEEDED')
@@ -18,18 +18,6 @@ describe('testing-github-integration tests', () => {
             expect(items[0], 'First dataset item').toBeObject();
             expect(items[0].title, 'First dataset item\' title').toEqual('Examples | Crawlee for JavaScript · Build reliable crawlers. Fast.');
             expect(items[1].title, 'Second dataset item\' title').toEqual('Crawlee · Build reliable crawlers. Fast.');
-        });
-    })
-
-    testActor('lukaskrivka/testing-github-integration-2', 'another basic test', async ({ expect: Expect, run }) => {
-        const expect = Expect.soft
-        const runResult = await run({ input: {} })
-        Expect(runResult).toHaveStatus('SUCCEEDED')
-
-        await runResult.withLog((log) => {
-            expect(log).not.toContain('ReferenceError');
-            expect(log).not.toContain('TypeError');
-            expect(log).not.toContain('Cannot save before loading old data');
         });
     })
 })

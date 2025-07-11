@@ -1,6 +1,6 @@
 import { describe, testActor } from '@oklinov/public-actors-tools/lib/lib'
 
-describe('testing-github-integration tests', () => {
+describe('Core tests', () => {
     testActor('lukaskrivka/testing-github-integration', 'basic test', async ({ expect: Expect, run }) => {
         const expect = Expect.soft
         const runResult = await run({ input: {} })
@@ -11,9 +11,9 @@ describe('testing-github-integration tests', () => {
             expect(log).not.toContain('TypeError');
             expect(log).not.toContain('Cannot save before loading old data');
         });
-    })
+    });
 
-    testActor('lukaskrivka/testing-github-integration', 'another basic test', async ({ expect: Expect, run }) => {
+    testActor('lukaskrivka/testing-github-integration-2', 'Core test', async ({ expect: Expect, run }) => {
         const expect = Expect.soft
         const runResult = await run({ input: {} })
         Expect(runResult).toHaveStatus('SUCCEEDED')
@@ -23,9 +23,5 @@ describe('testing-github-integration tests', () => {
             expect(log).not.toContain('TypeError');
             expect(log).not.toContain('Cannot save before loading old data');
         });
-
-        await runResult.withDataset(({ items }) => {
-            expect(items.length, 'Dataset cleanItemCount').toBeGreaterThan(100);
-        });
-    })
-})
+    });
+});
