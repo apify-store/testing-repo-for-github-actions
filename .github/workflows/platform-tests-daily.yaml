@@ -8,7 +8,7 @@ on:
 
 jobs:
     platformTestsCore:
-        name: Build Devel and Test
+        name: Platform tests - Daily
         if: github.ref == 'refs/heads/master'
         runs-on: ubuntu-latest
         steps:
@@ -25,7 +25,10 @@ jobs:
               run: npm install
 
             - name: Test
+              continue-on-error: true
               run: |
                   export RUN_ALL_PLATFORM_TESTS=1
                   npx vitest ./test/platform --run --reporter=default --reporter=json --outputFile=./test-output.json
+                  return_code=$?
                   npx public-actors-tools report-tests --report-file ./test-output.json
+                  exit $return_code
