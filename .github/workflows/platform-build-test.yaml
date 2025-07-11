@@ -2,7 +2,7 @@ name: PR -> Build devel and test
 
 on:
     pull_request:
-        branches: [ master, main ]
+        branches: [ master, main, before-ondro-changes ]
 
 jobs:
     buildDevelAndTest:
