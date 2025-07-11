@@ -32,7 +32,7 @@ jobs:
                   return_code=$?
                   npx public-actors-tools report-tests \
                     --report-file ./test-output.json \
-                    --workflow-nmae ${{ github.workflow }} \
+                    --workflow-name "${{ github.workflow }}" \
                     --job-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/job/${{ github.job_id }}" \
-                    --repository ${{ github.repository }}
+                    --repository "${{ github.repository }}"
                   exit $return_code
