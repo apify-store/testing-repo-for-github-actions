@@ -2,11 +2,11 @@ name: PR -> Build devel and test
 
 on:
     pull_request:
-        branches: [ master, main ]
+        branches: [ master, main, before-ondro-changes ]
 
 jobs:
     buildDevelAndTest:
-        uses: apify-store/github-actions-source/.github/workflows/pr-build-test.yaml@master
+        uses: apify-store/github-actions-source/.github/workflows/pr-build-test.yaml@feat/runner-in-action
         # Remove the input for production runs (default is 'prod')
         with: 
             runnerLabel: 'beta'
