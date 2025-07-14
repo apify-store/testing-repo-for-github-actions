@@ -33,6 +33,6 @@ jobs:
                   npx public-actors-tools report-tests \
                     --report-file ./test-output.json \
                     --workflow-name "${{ github.workflow }}" \
-                    --job-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}/job/${{ github.job_id }}" \
+                    --job-url "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
                     --repository "${{ github.repository }}"
                   exit $return_code
