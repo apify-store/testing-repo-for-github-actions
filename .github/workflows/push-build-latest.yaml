@@ -1,0 +1,10 @@
+name: Build latest and report to slack
+
+on:
+    push:
+        branches: [ master ]
+
+jobs:
+    pushBuildLatest:
+        uses: apify-store/github-actions-source/.github/workflows/push-build-latest.yaml@new_master
+        secrets: inherit
