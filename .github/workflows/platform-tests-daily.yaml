@@ -8,29 +8,5 @@ on:
 
 jobs:
     platformTestsDaily:
-        name: Platform tests - Daily
-        if: github.ref == 'refs/heads/master'
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout Repository
-              uses: actions/checkout@v4
-              with:
-                fetch-depth: 0
-
-            - uses: oNaiPs/secrets-to-env-action@b64e0192bc4bd2ec0682dee8696470d4866577fa
-              with:
-                secrets: ${{ toJSON(secrets) }}
-
-            - name: Install dependencies
-              run: npm install
-
-            - name: Test
-              env:
-                JOB_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-              run: |
-                  set +e
-                  export RUN_ALL_PLATFORM_TESTS=1
-                  npx vitest ./test/platform --run --reporter=default --reporter=json --outputFile=./test-output.json
-                  return_code=$?
-                  npx public-actors-tools report-tests --report-file ./test-output.json
-                  exit $return_code
+        uses: apify-store/github-actions-source/.github/workflows/platform-tests-daily.yaml@new_master
+        secrets: inherit
