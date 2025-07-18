@@ -4,7 +4,7 @@ describe('Core tests', () => {
     testActor('lukaskrivka/testing-github-integration', 'basic test', async ({ expect: Expect, run }) => {
         const expect = Expect.soft;
         const runResult = await run({ input: {} });
-        expect(runResult).toFinishWith({
+        await expect(runResult).toFinishWith({
             datasetItemCount: { min: 10 },
         });
 
@@ -18,7 +18,7 @@ describe('Core tests', () => {
     testActor('lukaskrivka/testing-github-integration-2', 'Core test', async ({ expect: Expect, run }) => {
         const expect = Expect.soft;
         const runResult = await run({ input: {} });
-        expect(runResult).toFinishWith({
+        await expect(runResult).toFinishWith({
             datasetItemCount: { min: 10 },
         });
 
