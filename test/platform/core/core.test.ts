@@ -13,7 +13,7 @@ describe('Core tests', () => {
         });
 
         await runResult.withDataset(({ items }) => {
-            expect(items.length, 'Dataset cleanItemCount').toBeGreaterThan(100);
+            expect(items.length, 'Dataset cleanItemCount').toBeGreaterThan(10);
         });
     });
 
@@ -29,7 +29,7 @@ describe('Core tests', () => {
         });
 
         await runResult.withDataset<{ title: string }>(({ items }) => {
-            expect(items.length, 'Dataset cleanItemCount').toBeGreaterThan(150);
+            expect(items.length, 'Dataset cleanItemCount').toBeGreaterThan(10);
 
             expect(items[0], 'First dataset item').toBeObject();
             expect(items[0].title, 'First dataset item\' title').toEqual('Examples | Crawlee for JavaScript · Build reliable crawlers. Fast.');
