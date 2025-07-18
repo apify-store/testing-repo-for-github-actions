@@ -8,5 +8,7 @@ on:
 
 jobs:
     platformTestsCore:
-        uses: apify-store/github-actions-source/.github/workflows/platform-tests-core.yaml@new_master
+        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@new_master
+        with:
+            subtest: core
         secrets: inherit
