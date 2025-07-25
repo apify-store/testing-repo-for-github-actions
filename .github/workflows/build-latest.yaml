@@ -1,13 +1,10 @@
-name: Build latest - Test repo
+name: Build latest and report to slack
 
 on:
     push:
-        branches: [ master, main ]
+        branches: [ master ]
 
 jobs:
-    buildLatest:
-        uses: apify-store/github-actions-source/.github/workflows/push-build-latest.yaml@master
-        # Remove the input for production runs (default is 'prod')
-        with: 
-            runnerLabel: 'beta'
+    pushBuildLatest:
+        uses: apify-store/github-actions-source/.github/workflows/push-build-latest.yaml@new_master
         secrets: inherit
