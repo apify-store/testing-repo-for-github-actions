@@ -2,12 +2,9 @@ name: PR -> Build devel and test
 
 on:
     pull_request:
-        branches: [ master, main ]
+        branches: [ master ]
 
 jobs:
     buildDevelAndTest:
-        uses: apify-store/github-actions-source/.github/workflows/pr-build-test.yaml@master
-        # Remove the input for production runs (default is 'prod')
-        with: 
-            runnerLabel: 'beta'
+        uses: apify-store/github-actions-source/.github/workflows/pr-build-test.yaml@new_master
         secrets: inherit
