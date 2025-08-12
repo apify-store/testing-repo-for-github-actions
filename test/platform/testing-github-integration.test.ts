@@ -1,10 +1,9 @@
 import { describe, testActor } from '@oklinov/public-actors-tools';
 
 describe('testing-github-integration Tests', () => {
-    testActor('lukaskrivka/testing-github-integration', 'Basic test', async ({ expect: Expect, run }) => {
-        const expect = Expect.soft;
+    testActor('lukaskrivka/testing-github-integration', 'Basic test', async ({ expect, run }) => {
         const runResult = await run({ input: {} });
-        await expect(runResult).toFinishWith({
+        await expect.hard(runResult).toFinishWith({
             datasetItemCount: { min: 10, max: 500 },
         });
     });
