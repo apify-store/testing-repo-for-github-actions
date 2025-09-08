@@ -1,4 +1,4 @@
-import { describe, testActor } from '@oklinov/public-actors-tools';
+import { describe, testActor } from 'apify-test-tools';
 
 describe('Core tests', () => {
     testActor('lukaskrivka/testing-github-integration', 'basic test', async ({ expect, run }) => {
