@@ -25,7 +25,7 @@ await Actor.init();
 // Structure of input is defined in input_schema.json
 const {
     startUrls = ['https://crawlee.dev'],
-    maxRequestsPerCrawl = 100,
+    maxRequestsPerCrawl = 5,
 } = await Actor.getInput<Input>() ?? {} as Input;
 
 const proxyConfiguration = await Actor.createProxyConfiguration();
