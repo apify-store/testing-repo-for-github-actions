@@ -1,5 +1,9 @@
 TEST
 
+## 2025-08-01
+*Features*
+- move platform tests inside repo
+
 ## 2024-07-25
 *Features*
 TEST
