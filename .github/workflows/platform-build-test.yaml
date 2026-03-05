@@ -6,8 +6,6 @@ on:
 
 jobs:
     buildDevelAndTest:
-        uses: apify-store/github-actions-source/.github/workflows/pr-build-test.yaml@master
+        uses: apify-store/github-actions-source/.github/workflows/pr-build-test.yaml@perf-debug/base-commit
         # Remove the input for production runs (default is 'prod')
-        with: 
-            runnerLabel: 'beta'
         secrets: inherit
