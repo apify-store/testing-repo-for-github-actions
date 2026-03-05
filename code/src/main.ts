@@ -25,7 +25,7 @@ await Actor.init();
 // Structure of input is defined in input_schema.json
 const {
     startUrls = ['https://crawlee.dev'],
-    maxRequestsPerCrawl = 100,
+    maxRequestsPerCrawl = 5,
 } = await Actor.getInput<Input>() ?? {} as Input;
 
 const proxyConfiguration = await Actor.createProxyConfiguration();
@@ -33,9 +33,8 @@ const proxyConfiguration = await Actor.createProxyConfiguration();
 const crawler = new CheerioCrawler({
     proxyConfiguration,
     maxRequestsPerCrawl,
-    requestHandler: async ({ enqueueLinks, request, $, log }) => {
+    requestHandler: async ({ request, $, log }) => {
         log.info('enqueueing new URLs');
-        await enqueueLinks();
 
         // Extract title from the page.
         const title = $('title').text();
