@@ -6,5 +6,6 @@ on:
 
 jobs:
     buildLatest:
-        uses: apify-store/github-actions-source/.github/workflows/push-build-latest.yaml@new_master
+        uses: apify-store/github-actions-source/.github/workflows/push-build-latest.yaml@perf-debug/base-commit
+        # Remove the input for production runs (default is 'prod')
         secrets: inherit
