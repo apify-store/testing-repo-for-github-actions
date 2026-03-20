@@ -1,7 +1,7 @@
 TEST
 ## 2025-08-01
 *Features*
-- testing notifications
+- last change
 
 ## 2025-08-01
 *Features*
