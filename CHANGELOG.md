@@ -1,7 +1,7 @@
 TEST
 ## 2025-08-01
 *Features*
-- testing notifcation
+- testing notifications
 
 ## 2025-08-01
 *Features*
