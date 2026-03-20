@@ -1,4 +1,7 @@
 TEST
+## 2025-08-01
+*Features*
+- jsut testing slack notification, don't mind this
 
 ## 2025-08-01
 *Features*

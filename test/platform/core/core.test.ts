@@ -16,5 +16,6 @@ describe('Core tests', () => {
 
         const { items } = await runResult.getDataset<{ title: string }>();
         expect(items[0], 'First dataset item').toBeObject();
+        expect(false, 'A fake test to see slack notification').toBe(true);
     });
 });
