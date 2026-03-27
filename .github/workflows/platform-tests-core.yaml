@@ -8,7 +8,7 @@ on:
 
 jobs:
     platformTestsCore:
-        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@feat/slack-opt-in
+        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@feat/delete-old-builds
         with:
             subtest: core
         secrets: inherit
