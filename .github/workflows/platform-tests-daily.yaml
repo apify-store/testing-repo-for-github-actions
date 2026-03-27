@@ -8,5 +8,5 @@ on:
 
 jobs:
     platformTestsDaily:
-        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@fix/base-commit-quoted
+        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@feat/delete-old-builds
         secrets: inherit
