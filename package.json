@@ -1,5 +1,5 @@
 {
-	"name": "store-testing-repo-for-github-test",
+	"name": "store-testing-repo-for-github",
 	"version": "0.0.1",
 	"type": "module",
 	"description": "This is a boilerplate of an Apify actor.",
