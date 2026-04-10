@@ -28,7 +28,8 @@
 		"build": "tsc",
 		"lint": "eslint ./src --ext .ts",
 		"lint:fix": "eslint ./src --ext .ts --fix",
-		"test": "echo \"test not implemented\""
+		"test": "echo \"test not implemented\"",
+        "build-check": "echo \"build-check\" && tsc"
 	},
 	"author": "It's not you it's me",
 	"license": "ISC"
