@@ -42,4 +42,4 @@ RUN npm --quiet set progress=false \
 COPY --from=builder /usr/src/app/dist ./dist
 
 # Run the image.
-CMD npm run start:prod --silent
+CMD ["node", "dist/main.js"]
