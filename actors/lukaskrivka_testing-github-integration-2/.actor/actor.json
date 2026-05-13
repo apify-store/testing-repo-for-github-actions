@@ -5,7 +5,7 @@
 	"description": "Crawlee and Cheerio project in typescript.",
 	"version": "0.0",
 	"meta": {
-		"templateId": "miscc"
+		"templateId": "misccc"
 	},
     "dockerfile": "../../../Dockerfile",
     "dockerContextDir": "../../..",
