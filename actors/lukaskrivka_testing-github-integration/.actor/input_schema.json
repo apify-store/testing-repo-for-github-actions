@@ -1,8 +1,5 @@
 {
     "title": "CheerioCrawler Templatetest",
     "type": "object",
-    "schemaVersion": 1,
-    "properties": {
-        
-    }
+    "schemaVersion": 1
 }
