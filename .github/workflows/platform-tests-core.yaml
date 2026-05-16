@@ -8,7 +8,7 @@ on:
 
 jobs:
     platformTestsCore:
-        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@perf/docker-cache
+        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@claude/enforce-changelog-updates-tt0gg
         with:
             subtest: core
         secrets: inherit
