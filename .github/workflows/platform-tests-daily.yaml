@@ -8,5 +8,5 @@ on:
 
 jobs:
     platformTestsDaily:
-        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@fix/run-on-branch
+        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@master
         secrets: inherit
