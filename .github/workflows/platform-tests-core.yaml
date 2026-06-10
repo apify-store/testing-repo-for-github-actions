@@ -8,7 +8,7 @@ on:
 
 jobs:
     platformTestsCore:
-        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@perf/docker-cache
+        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@fix/run-on-branch
         with:
             subtest: core
         secrets: inherit
