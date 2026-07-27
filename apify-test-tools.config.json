@@ -1,7 +1,25 @@
 {
-  "actors": [
-    { "folder": "actors/lukaskrivka_testing-github-integration", "actorFullName": "ruocco-l/store-testing-repo-for-github", "tokenEnvVar": "APIFY_TOKEN",
-"overrideActorContext": ["src"] },
-    { "folder": "standalone-actors/lukaskrivka_test-standalone", "actorFullName": "ruocco-l/test-standalone", "tokenEnvVar": "APIFY_TOKEN" }
-  ]
+    "actors": [
+        {
+            "folder": "actors/lukaskrivka_testing-github-integration",
+            "actorFullName": "lukaskrivka/store-testing-repo-for-github",
+            "tokenEnvVar": "APIFY_TOKEN_LUKASKRIVKA",
+            "overrideActorContext": [
+                "src", "shared", "test"
+            ]
+        },
+        {
+            "folder": "actors/lukaskrivka_testing-github-integration-2",
+            "actorFullName": "lukaskrivka/store-testing-repo-for-github",
+            "tokenEnvVar": "APIFY_TOKEN_LUKASKRIVKA",
+            "overrideActorContext": [
+                "src", "shared", "test"
+            ]
+        },
+        {
+            "folder": "standalone-actors/lukaskrivka_test-standalone",
+            "actorFullName": "lukaskrivka/test-standalone",
+            "tokenEnvVar": "APIFY_TOKEN_LUKASKRIVKA"
+        }
+    ]
 }
