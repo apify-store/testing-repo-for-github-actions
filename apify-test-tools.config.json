@@ -1,0 +1,6 @@
+{
+  "actors": [
+    { "folder": "actors/lukaskrivka_testing-github-integration", "actorFullName": "ruocco-l/store-testing-repo-for-github", "tokenEnvVar": "APIFY_TOKEN" },
+    { "folder": "standalone-actors/lukaskrivka_test-standalone", "actorFullName": "ruocco-l/test-standalone", "tokenEnvVar": "APIFY_TOKEN" }
+  ]
+}
