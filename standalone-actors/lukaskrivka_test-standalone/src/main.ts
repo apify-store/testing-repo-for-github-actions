@@ -15,6 +15,7 @@ await Actor.init();
 
 
 // blablablablabla
+// A change in this actor triggers a change everywhere! We need to narrow the context for the minactors
 
 interface Input {
     url: string;
