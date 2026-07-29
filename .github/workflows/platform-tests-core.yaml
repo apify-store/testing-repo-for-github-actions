@@ -8,7 +8,9 @@ on:
 
 jobs:
     platformTestsCore:
-        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@fix/run-on-branch
+        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@feat/configurable-slack-channels
         with:
             subtest: core
+            # TODO(test): swap for a real channel
+            report-slack-channel: '#test-notifications'
         secrets: inherit
