@@ -1,6 +1,6 @@
 {
 	"actorSpecification": 1,
-	"name": "test-standalone",
+	"name": "dummy-for-testing-3",
 	"title": "Scrape single page in TypeScript",
 	"description": "Scrape data from single page with provided URL.",
 	"version": "0.0",
