@@ -8,7 +8,7 @@ on:
 
 jobs:
     platformTestsCore:
-        uses: apify-store/github-actions-source/.github/workflows/platform-tests.yaml@fix/run-on-branch
+        uses: apify/apify-test-tools/.github/workflows/public_platform-tests.yaml@workflows-v0
         with:
-            subtest: core
+            test-files-glob: core
         secrets: inherit

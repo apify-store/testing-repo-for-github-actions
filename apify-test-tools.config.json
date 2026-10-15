@@ -1,19 +1,19 @@
 {
     "actors": [
         {
-            "folder": "actors/lukaskrivka_testing-github-integration",
-            "actorFullName": "lukaskrivka/testing-github-integration",
-            "tokenEnvVar": "APIFY_TOKEN_LUKASKRIVKA"
+            "folder": "actors/dummy-for-testing-1",
+            "actorFullName": "test-tools-testing-sandbox/dummy-for-testing-1",
+            "tokenEnvVar": "E2E_TEST_APIFY_TOKEN_DBYPODOIHUZABNQTR"
         },
         {
-            "folder": "actors/lukaskrivka_testing-github-integration-2",
-            "actorFullName": "lukaskrivka/testing-github-integration-2",
-            "tokenEnvVar": "APIFY_TOKEN_LUKASKRIVKA"
+            "folder": "actors/dummy-for-testing-2",
+            "actorFullName": "test-tools-testing-sandbox/dummy-for-testing-2",
+            "tokenEnvVar": "E2E_TEST_APIFY_TOKEN_DBYPODOIHUZABNQTR"
         },
         {
-            "folder": "standalone-actors/lukaskrivka_test-standalone",
-            "actorFullName": "lukaskrivka/test-standalone",
-            "tokenEnvVar": "APIFY_TOKEN_LUKASKRIVKA"
+            "folder": "standalone-actors/dummy-for-testing-3",
+            "actorFullName": "test-tools-testing-sandbox/dummy-for-testing-3",
+            "tokenEnvVar": "E2E_TEST_APIFY_TOKEN_DBYPODOIHUZABNQTR"
         }
     ]
 }
