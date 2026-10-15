@@ -12,3 +12,9 @@ Actors, all in the isolated `test-tools-testing-sandbox` org. Their token is the
 Each Actor's default version is built from this repo, e.g.
 `https://github.com/apify-store/testing-repo-for-github-actions#master:actors/dummy-for-testing-1`.
 The `build` and `release` commands refuse to run otherwise.
+
+## E2E fixture branches
+
+The `e2e/base` and `e2e/feature` branches are fixtures for the end-to-end tests in
+[apify-test-tools](https://github.com/apify/apify-test-tools/tree/master/test/e2e). Against `e2e/base`,
+`e2e/feature` changes only `dummy-for-testing-1`. Never rebase, force-push or delete them, or the tests break.
