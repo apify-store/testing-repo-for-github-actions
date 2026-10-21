@@ -12,3 +12,4 @@ Actors, all in the isolated `test-tools-testing-sandbox` org. Their token is the
 Each Actor's default version is built from this repo, e.g.
 `https://github.com/apify-store/testing-repo-for-github-actions#master:actors/dummy-for-testing-1`.
 The `build` and `release` commands refuse to run otherwise.
+ 
