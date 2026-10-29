@@ -9,4 +9,4 @@ jobs:
         uses: apify/apify-test-tools/.github/workflows/public_pr-build-test.yaml@claude/zen-mayer-7md3vw
         secrets: 
             TESTER_APIFY_TOKEN: ${{ secrets.TESTER_APIFY_TOKEN }}
-            CONFIG_SECRETS: ${{toJSON(secrets)}}
+            # CONFIG_SECRETS: ${{toJSON(secrets)}}
