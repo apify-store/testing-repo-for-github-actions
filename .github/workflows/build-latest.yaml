@@ -7,4 +7,6 @@ on:
 jobs:
     buildLatest:
         uses: apify/apify-test-tools/.github/workflows/public_push-build-latest.yaml@claude/zen-mayer-7md3vw
-        secrets: inherit
+        secrets: 
+            TESTER_APIFY_TOKEN: ${{ secrets.TESTER_APIFY_TOKEN }}
+            CONFIG_SECRETS: ${{toJSON(secrets)}}
