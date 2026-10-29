@@ -11,6 +11,6 @@ jobs:
             TESTER_APIFY_TOKEN: ${{ secrets.TESTER_APIFY_TOKEN }}
             CONFIG_SECRETS: |
                 {
-                    "E2E_TEST_APIFY_TOKEN_DBYPODOIHUZABNQTR": "${{ secrets.E2E_TEST_APIFY_TOKEN_DBYPODOIHUZABNQTR }}",
+                    "E2E_TEST_APIFY_TOKEN_DBYPODOIHUZABNQTR": "${{ secrets.E2E_TEST_APIFY_TOKEN_DBYPODOIHUZANQTR }}",
                     "APIFY_TOKEN_PARTNER": "${{ secrets.APIFY_TOKEN_PARTNER }}"
                 }
