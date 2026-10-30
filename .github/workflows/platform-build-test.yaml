@@ -6,5 +6,8 @@ on:
 
 jobs:
     buildDevelAndTest:
-        uses: apify/apify-test-tools/.github/workflows/public_pr-build-test.yaml@claude/raw-build-command-testing
+        uses: apify/apify-test-tools/.github/workflows/public_pr-build-test.yaml@claude/kind-lamport-dyov8p
+        with:
+            # dummy-for-testing-1 has 0.99 env vars out of sync with 0.0 on purpose, for the env var check tests
+            require-env-vars-in-sync: false
         secrets: inherit
