@@ -7,4 +7,6 @@ on:
 jobs:
     buildLatest:
         uses: apify/apify-test-tools/.github/workflows/public_push-build-latest.yaml@claude/kind-lamport-dyov8p
+        with:
+            report-slack-channel: '#notif-testing-repo-for-github-actions'
         secrets: inherit
