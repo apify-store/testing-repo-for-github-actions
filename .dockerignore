@@ -14,9 +14,22 @@ node_modules
 
 # git and CI
 .github
+.husky
+lefthook.yml
+
+# editor and agent files
+.vscode
+.zed
+.claude
+AGENTS.md
+CLAUDE.md
 
 # tests
 test
+vitest.config.ts
+
+# build output, the Docker build creates it
+dist
 
 # other Actors with their own build
 standalone-actors

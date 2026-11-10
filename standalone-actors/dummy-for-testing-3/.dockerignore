@@ -15,3 +15,18 @@ node_modules
 
 # dist folder
 dist
+
+# git and CI
+.github
+.husky
+lefthook.yml
+
+# editor and agent files
+.zed
+.claude
+AGENTS.md
+CLAUDE.md
+
+# tests
+test
+vitest.config.ts
