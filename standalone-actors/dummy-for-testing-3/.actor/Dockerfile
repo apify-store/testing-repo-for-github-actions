@@ -11,7 +11,7 @@ RUN npm ls crawlee apify puppeteer playwright
 COPY package*.json ./
 
 # Install all dependencies. Don't audit to speed up the installation.
-RUN npm install --include=dev --audit=false
+RUN npm ci --include=dev --audit=false
 
 # Next, copy the source files using the user set
 # in the base image.
@@ -35,7 +35,7 @@ COPY package*.json ./
 # keep the image small. Avoid logging too much and print the dependency
 # tree for debugging
 RUN npm --quiet set progress=false \
-    && npm install --omit=dev --omit=optional \
+    && npm ci --omit=dev --omit=optional \
     && echo "Installed NPM packages:" \
     && (npm list --omit=dev --all || true) \
     && echo "Node.js version:" \
