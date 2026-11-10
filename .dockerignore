@@ -11,3 +11,12 @@ node_modules
 
 # git folder
 .git
+
+# git and CI
+.github
+
+# tests
+test
+
+# other Actors with their own build
+standalone-actors
