@@ -1,19 +1,17 @@
 {
-    "actors": [
-        {
-            "folder": "actors/dummy-for-testing-1",
-            "actorFullName": "test-tools-testing-sandbox/dummy-for-testing-1",
-            "tokenEnvVar": "E2E_TEST_APIFY_TOKEN_DBYPODOIHUZABNQTR"
-        },
-        {
-            "folder": "actors/dummy-for-testing-2",
-            "actorFullName": "test-tools-testing-sandbox/dummy-for-testing-2",
-            "tokenEnvVar": "E2E_TEST_APIFY_TOKEN_DBYPODOIHUZABNQTR"
-        },
-        {
-            "folder": "standalone-actors/dummy-for-testing-3",
-            "actorFullName": "test-tools-testing-sandbox/dummy-for-testing-3",
-            "tokenEnvVar": "E2E_TEST_APIFY_TOKEN_DBYPODOIHUZABNQTR"
+    "mode": "grouped",
+    "groups": {
+        "sandbox": {
+            "buildTokenEnvVar": "E2E_TEST_APIFY_TOKEN_DBYPODOIHUZABNQTR",
+            "testTokenEnvVar": "E2E_TEST_APIFY_TOKEN_DBYPODOIHUZABNQTR",
+            "actors": [
+                { "folder": "actors/dummy-for-testing-1", "actorFullName": "test-tools-testing-sandbox/dummy-for-testing-1" },
+                { "folder": "actors/dummy-for-testing-2", "actorFullName": "test-tools-testing-sandbox/dummy-for-testing-2" },
+                {
+                    "folder": "standalone-actors/dummy-for-testing-3",
+                    "actorFullName": "test-tools-testing-sandbox/dummy-for-testing-3"
+                }
+            ]
         }
-    ]
+    }
 }
